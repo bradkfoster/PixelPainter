@@ -43,7 +43,7 @@ function makeGrid(h, w) {
   }
 }
 
-makeGrid(12, 12);
+makeGrid(30, 30);
 
 
 
@@ -83,7 +83,7 @@ for (let i = 0; i < selcell.length; i++) {
   })
 }
 
-makeColorGrid(12, 4);
+makeColorGrid(14, 3);
 
 
 
@@ -126,3 +126,12 @@ function clearGrid() {
 }
 
 colors.appendChild(randomBtn);
+
+let savedArr = [];
+//console.log(grabCCells);
+for(let i = 0; i < grabCCells.length; i++){
+  //console.log(grabCCells[i].style.backgroundColor);
+  let cellsBackground = grabCCells[i].style.backgroundColor;
+  savedArr.push(cellsBackground);
+}
+console.log(savedArr.length);
