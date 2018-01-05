@@ -1,28 +1,40 @@
 #pixelPainter{
  
-    margin-top: 200px;
-    text-align: center;
+    margin-top: 50px;
+    
    }
+
+   #Grid{
+     float: right;
+     padding-right: 300px;
+   }
+
   .cells{
     border-style: solid;
     border-width: 2px;
     width: 30px;
     height: 30px;
     display: inline-block;
-   ;
-    
   }
+
+  .rows{
+    width: 400px;
+  }
+
   .colorCells{
     border-style: solid;
     border-width: 2px;
     width: 30px;
     height: 30px;
     display: inline-block;
-    
-    
+    float:;
+    margin: 0px;
     
   }
-  #allClear{
-    
-    display: inline-block;
+  
+  #colorDiv{
+    width: 400px;
+    text-align:right;
+    position: auto;
+    padding-left:100px;
   }

@@ -1,12 +1,13 @@
 console.log('sanity check');
 let currentColor = null;
 let selcell = document.getElementsByClassName('cells');
-let mouseD = true;
+let mouseD = false;
 
 
 
 let pixelPainter = document.getElementById('pixelPainter');
 let grid = document.createElement('div');
+grid.id = 'Grid';
 pixelPainter.appendChild(grid);
 
 function makeGrid(h, w) {
@@ -19,11 +20,18 @@ function makeGrid(h, w) {
       cell.id = 'cellId' + i + '' + j;
       cell.addEventListener('mousedown', function (e) {
         mouseD = true;
-        if (mouseD === true) {
-          changeBgColor(currentColor, e.target);
-        }
+
+        changeBgColor(currentColor, e.target);
+
+
+
       }, true)
 
+      cell.addEventListener('mouseover', function (e) {
+        if (mouseD) {
+          changeBgColor(currentColor, e.target);
+        }
+      })
       cell.addEventListener('mouseup', function (e) {
         mouseD = false;
       })
@@ -40,6 +48,7 @@ makeGrid(12, 12);
 
 
 let colors = document.createElement('div');
+colors.id = 'colorDiv';
 
 function makeColorGrid(h, w) {
 
@@ -74,7 +83,7 @@ for (let i = 0; i < selcell.length; i++) {
   })
 }
 
-makeColorGrid(6, 6);
+makeColorGrid(12, 4);
 
 
 
