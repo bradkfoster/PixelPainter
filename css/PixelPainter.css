@@ -9,7 +9,7 @@
     width: 30px;
     height: 30px;
     display: inline-block;
-   
+   ;
     
   }
   .colorCells{
@@ -23,6 +23,6 @@
     
   }
   #allClear{
-    padding-top: 30px;
+    
     display: inline-block;
   }
