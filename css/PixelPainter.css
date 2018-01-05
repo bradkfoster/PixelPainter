@@ -1,3 +1,7 @@
+body{
+  background-color: lightblue;
+}
+
 #pixelPainter{
  
     margin-top: 50px;
@@ -7,6 +11,7 @@
    h1{
      text-align: center;
      font-size: 3.5em;
+     background-image: url('https://s0.wp.com/wp-content/themes/pub/twentythirteen/images/headers/circle.png'); 
    }
 
    #Grid{
@@ -49,8 +54,12 @@
   }
 
   .btn{
-    color:red;
+    color:black;
     margin-top: 20px;
     display: inline-block;
     text-align: center;
+    height: 30px;
+    width: 120px;
+    border-radius:8px;
+    margin-left:20px;
   }

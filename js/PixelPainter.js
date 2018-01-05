@@ -126,25 +126,26 @@ function getRandomColor() {
 
 function clearGrid() {
   colorCells.style.background = '#FFFFFF';
-  
+
 }
 
 grid.appendChild(randomBtn);
 
 //===============SAVEBUTTON===============
 let savedArr = [];
-let saveBtn =document.createElement('button');
+let saveBtn = document.createElement('button');
 saveBtn.innerHTML = 'save'
-for(let i = 0; i < selcell.length; i++){
-saveBtn.addEventListener('click', function(){
-  
+saveBtn.className = 'btn'
+for (let i = 0; i < selcell.length; i++) {
+  saveBtn.addEventListener('click', function () {
 
-  console.log(selcell[i]);
-  
-  //console.log(grabCCells[i].style.backgroundColor);
-  let cellsBackground = selcell[i].style.backgroundColor;
-  savedArr.push(cellsBackground);
-})
+
+    console.log(selcell[i]);
+
+    //console.log(grabCCells[i].style.backgroundColor);
+    let cellsBackground = selcell[i].style.backgroundColor;
+    savedArr.unshift(cellsBackground);
+  })
 }
 grid.appendChild(saveBtn)
 
@@ -153,11 +154,11 @@ grid.appendChild(saveBtn)
 
 let loadBtn = document.createElement('button');
 loadBtn.innerHTML = 'load';
-for(let i = 0; i < selcell.length; i++){
-  loadBtn.addEventListener('click', function(){
-selcell[i].style.background = savedArr[i];
+loadBtn.className = 'btn';
+for (let i = 0; i < selcell.length; i++) {
+  loadBtn.addEventListener('click', function () {
+    selcell[i].style.background = savedArr[i];
 
   })
 }
 grid.appendChild(loadBtn);
-
