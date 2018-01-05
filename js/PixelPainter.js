@@ -2,7 +2,9 @@ console.log('sanity check');
 let currentColor = null;
 let selcell = document.getElementsByClassName('cells');
 let mouseD = false;
+colorCells = 'white';
 
+//selcell.style.backgroundColor = 'white';
 
 
 let pixelPainter = document.getElementById('pixelPainter');
@@ -20,10 +22,9 @@ function makeGrid(h, w) {
       cell.id = 'cellId' + i + '' + j;
       cell.addEventListener('mousedown', function (e) {
         mouseD = true;
+        
 
         changeBgColor(currentColor, e.target);
-
-
 
       }, true)
 
@@ -84,7 +85,7 @@ for (let i = 0; i < selcell.length; i++) {
   })
 }
 
-makeColorGrid(14, 3);
+makeColorGrid(12, 3);
 
 
 
@@ -131,6 +132,8 @@ function clearGrid() {
 
 grid.appendChild(randomBtn);
 
+
+
 //===============SAVEBUTTON===============
 let savedArr = [];
 let saveBtn = document.createElement('button');
@@ -139,8 +142,9 @@ saveBtn.className = 'btn'
 for (let i = 0; i < selcell.length; i++) {
   saveBtn.addEventListener('click', function () {
 
+    
 
-    console.log(selcell[i]);
+ 
 
     //console.log(grabCCells[i].style.backgroundColor);
     let cellsBackground = selcell[i].style.backgroundColor;
@@ -153,7 +157,7 @@ grid.appendChild(saveBtn)
 //==============LOADBUTTON=================
 
 let loadBtn = document.createElement('button');
-loadBtn.innerHTML = 'load';
+loadBtn.innerHTML = 'load and flip';
 loadBtn.className = 'btn';
 for (let i = 0; i < selcell.length; i++) {
   loadBtn.addEventListener('click', function () {
