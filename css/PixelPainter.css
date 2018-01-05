@@ -21,6 +21,7 @@
     height: 15px;
     display: inline-block;
   }
+  
 
   .rows{
     width: 400px;
@@ -37,10 +38,19 @@
     border-radius:25px;
     
   }
+
+  
   
   #colorDiv{
     width: 400px;
     text-align:right;
     position: auto;
     padding-left:100px;
+  }
+
+  .btn{
+    color:red;
+    margin-top: 20px;
+    display: inline-block;
+    text-align: center;
   }
